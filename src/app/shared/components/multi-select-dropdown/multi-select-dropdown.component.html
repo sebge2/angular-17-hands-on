@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>{{ placeHolder }}</mat-label>
+    <mat-select [(value)]="selected" multiple>
+        @for (item of availableValues; track item) {
+            <mat-option [value]="item">{{itemLabelExtractor(item)}}</mat-option>
+        }
+    </mat-select>
+</mat-form-field>

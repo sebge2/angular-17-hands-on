@@ -1,0 +1,15 @@
+<div style="width: 75%; margin: auto;">
+    <app-multi-select-dropdown
+            [placeHolder]="'Select Environments'"
+            [itemLabelExtractor]="toLabel"
+            [availableValues]="environmentService.environments()"
+            [selected]="selectedEnvironments()"
+            (selectedChange)="onSelectedEnvironments($event)"
+    >
+    </app-multi-select-dropdown>
+
+    <app-environment-comparator-table
+            [environments]="selectedEnvironments()"
+            [deployables]="deployableDifferences()">
+    </app-environment-comparator-table>
+</div>

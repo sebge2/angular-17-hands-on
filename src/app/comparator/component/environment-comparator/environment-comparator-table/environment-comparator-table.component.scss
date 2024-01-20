@@ -1,0 +1,9 @@
+.comparator-row-name-grid {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+
+  .mat-icon {
+    display:flex;
+    align-self:center;
+  }
+}
